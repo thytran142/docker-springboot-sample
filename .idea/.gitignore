@@ -1,0 +1,8 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Datasource local storage ignored files
+/../../../../../../../../../../:\Users\thytr\IdeaProjects\Ex_Files_Ext_Docker_Spring_Boot_Upd\Exercise Files\Ch01\01_01\explorecali\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/

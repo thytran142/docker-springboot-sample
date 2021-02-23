@@ -1,0 +1,38 @@
+POST http://localhost:8080/tours/1/ratings/3?customers=1,2,3,4,5,6
+Content-Type: application/json
+
+{}
+
+###
+GET http://localhost:8080/packages/
+Accept: application/json
+
+###
+PUT http://localhost:8080/tours/1/ratings
+Content-Type: application/json
+
+{
+  "score": 1,
+  "comment": "I thought it was stupid",
+  "customerId": 4
+}
+
+###
+GET http://localhost:8080/tours/1/ratings/average
+Accept: application/json
+
+###
+GET http://localhost:8080/tours/1/ratings
+Accept: application/json
+
+###
+POST http://localhost:8080/tours/1/ratings
+Content-Type: application/json
+
+{
+  "score": 5,
+  "comment": "I thought it was ok.",
+  "customerId": 8
+}
+
+###
