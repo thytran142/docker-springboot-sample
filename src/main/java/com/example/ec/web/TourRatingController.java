@@ -2,6 +2,8 @@ package com.example.ec.web;
 
 import com.example.ec.domain.*;
 import com.example.ec.repo.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.data.domain.*;
 import org.springframework.http.*;
@@ -19,6 +21,8 @@ import java.util.stream.*;
 @RestController
 @RequestMapping(path = "/tours/{tourId}/ratings")
 public class TourRatingController {
+    private static final Logger LOGGER =
+            LoggerFactory.getLogger(TourRatingController.class);
     TourRatingRepository tourRatingRepository;
     TourRepository tourRepository;
 
@@ -165,6 +169,7 @@ public class TourRatingController {
     @ResponseStatus(HttpStatus.NOT_FOUND)
     @ExceptionHandler(NoSuchElementException.class)
     public String return400(NoSuchElementException ex) {
+        LOGGER.error("Unable to complete transaction ", ex);
         return ex.getMessage();
 
     }
